@@ -1,6 +1,9 @@
 <h2>{{this.title}}</h2>
 <ul>
   {{#each this.people as |person|}}
-    <li>{{person}}</li>
+    <li>
+      <button {{action "showPerson" person}}>{{person}}</button>
+      <button {{action "talkToMe" person}}>Talk to Me</button>
+    </li>
   {{/each}}
 </ul>
